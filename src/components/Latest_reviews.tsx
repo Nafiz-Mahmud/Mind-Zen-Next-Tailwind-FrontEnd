@@ -27,7 +27,7 @@ export default function LatestReviews() {
     {
       id: 3,
       img: third_img,
-      title: "The Last Empire",
+      title: "Lunar Storm",
       author: "Terry C.",
       reviewer: "Berry Allen",
       rating: 2.1,
@@ -44,20 +44,26 @@ export default function LatestReviews() {
         {reviews?.map((review) => (
           <div className="review" key={review.id}>
             <div className="img_container">
-              <Image src={review.img} alt={review.title} />
+              <Link href={`/reviews/${review.id}`}>
+                <Image src={review.img} alt={review.title} />
+              </Link>
             </div>
             <div className="book_info">
-              <h1 className="book_title">{review.title}</h1>
+              <h1 className="book_title">
+                <Link href={`/reviews/${review.id}`}>{review.title}</Link>
+              </h1>
               <h3 className="time">30 minutes ago</h3>
               <h3 className="author">{review.author.toUpperCase()}</h3>
               <h3 className="rating">{review.rating} / 5.0</h3>
               <h3 className="reviewer">
                 Reviewed by -
-                <Link href={`/${review.reviewer}`}>{review.reviewer}</Link>
+                <Link href={`/profiles/${review.id}`}>{review.reviewer}</Link>
               </h3>
               <p className="desc">
                 {review.desc}
-                <span className="see_more"> see more...</span>
+                <span className="see_more">
+                  <Link href={`/reviews/${review.id}`}> see more...</Link>
+                </span>
               </p>
             </div>
           </div>

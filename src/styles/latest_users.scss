@@ -29,7 +29,7 @@
         @apply flex flex-col justify-center gap-[1rem] py-[.5rem];
 
         .user_name {
-          @apply text-[3rem] font-bold;
+          @apply text-[3rem] font-bold text-gray-500 hover:text-gray-900;
         }
         .user_email,
         .user_time,

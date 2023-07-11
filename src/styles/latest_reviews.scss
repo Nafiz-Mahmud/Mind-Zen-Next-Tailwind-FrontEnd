@@ -17,8 +17,9 @@
         height: 20rem;
         width: 20rem;
         margin-right: 2rem;
+        overflow: hidden;
         img {
-          @apply h-[100%] w-[100%];
+          @apply h-[100%] w-[100%] hover:scale-[1.1] duration-300;
           object-position: center;
         }
       }
@@ -26,7 +27,7 @@
         @apply flex flex-col justify-between py-[.5rem];
 
         .book_title {
-          @apply text-[3rem] font-bold;
+          @apply text-[3rem] font-bold text-gray-500 hover:text-gray-900;
         }
         .time,
         .author,

@@ -39,10 +39,14 @@ export default function LatestUsers() {
         {users?.map((user) => (
           <div className="user" key={user.id}>
             <div className="img_container">
-              <Image src={user.img} alt={user.name} />
+              <Link href={`/profiles/${user.id}`}>
+                <Image src={user.img} alt={user.name} />
+              </Link>
             </div>
             <div className="user_info">
-              <h1 className="user_name">{user.name}</h1>
+              <h1 className="user_name">
+                <Link href={`/profiles/${user.id}`}>{user.name}</Link>
+              </h1>
               <h3 className="user_email">{user.email}</h3>
               <h3 className="user_time">Joined 2 days ago</h3>
               <h3 className="user_review_count">{user.reviews} Reviews</h3>

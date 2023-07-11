@@ -3,7 +3,11 @@ import Link from "next/link";
 export default function Nav() {
   return (
     <div className="nav">
-      <h1>Mind Zen</h1>
+      <div className="nav_title">
+        <h1>
+          <Link href="/">Mind Zen</Link>
+        </h1>
+      </div>
       <ul>
         <li>
           <Link href="/">Home</Link>
@@ -15,7 +19,7 @@ export default function Nav() {
           <Link href="/about">About</Link>
         </li>
         <li>
-          <Link href="/profile">Profile</Link>
+          <Link href="/user_profile/123">Profile</Link>
         </li>
         <button>
           <Link href="/sign_up" className="sign_up_button">

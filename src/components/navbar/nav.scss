@@ -1,9 +1,12 @@
 .nav {
-  @apply flex items-center;
-  h1 {
-    @apply text-[4rem]  font-bold  cursor-pointer;
+  @apply flex items-center justify-between;
+  .nav_title {
     flex: 0.8;
-    text-shadow: 0rem 0rem 0.4rem gray;
+    cursor: auto;
+    h1 {
+      @apply text-[4rem] font-bold cursor-pointer w-fit;
+      text-shadow: 0rem 0rem 0.4rem gray;
+    }
   }
   ul {
     flex: 1;

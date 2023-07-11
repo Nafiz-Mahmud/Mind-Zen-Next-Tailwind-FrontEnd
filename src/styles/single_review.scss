@@ -1,0 +1,41 @@
+.single_review {
+  //   background-color: coral;
+  margin-top: 3rem;
+  .single_review_header {
+    display: flex;
+
+    gap: 5rem;
+    .img_container {
+      flex: 1;
+      height: 30rem;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-fit: center;
+      }
+    }
+    .info {
+      flex: 2;
+      @apply flex flex-col gap-[1.2rem];
+      .single_review_title {
+        @apply text-[4rem] font-bold;
+      }
+      .single_review_author {
+        @apply text-[2.5rem] font-bold text-gray-600;
+      }
+      .single_review_rating {
+        @apply text-[2rem] text-yellow-300 font-bold;
+      }
+      .single_review_reviewer {
+        @apply text-[1.8rem] font-bold text-gray-500;
+      }
+    }
+  }
+  p {
+    @apply text-gray-600 text-[2rem] font-bold mb-[3rem];
+    letter-spacing: 0.05rem;
+    word-spacing: 0.15rem;
+  }
+}
