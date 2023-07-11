@@ -1,0 +1,46 @@
+.latest_users {
+  .latest_users_header {
+    @apply flex items-center justify-between mt-[3rem] mb-[3rem];
+    .see_more_button {
+      @apply bg-gray-500 px-[1rem] py-[0.5rem] text-white font-bold hover:bg-gray-700;
+    }
+  }
+  .latest_users_title {
+    @apply text-[3rem] font-bold;
+  }
+  .users {
+    @apply flex flex-col gap-[2rem] mb-[5rem];
+    .user {
+      @apply flex;
+      box-shadow: 0rem 0rem 0.5rem lightgray;
+      .img_container {
+        height: 20rem;
+        width: 20rem;
+        margin-right: 2rem;
+        padding: 2rem 2rem;
+        img {
+          @apply h-[100%] w-[100%];
+          border-radius: 50%;
+          object-position: center;
+          object-fit: cover;
+        }
+      }
+      .user_info {
+        @apply flex flex-col justify-center gap-[1rem] py-[.5rem];
+
+        .user_name {
+          @apply text-[3rem] font-bold;
+        }
+        .user_email,
+        .user_time,
+        .user_review_count {
+          @apply text-gray-500 text-[1.3rem] font-bold;
+        }
+
+        .user_review_count {
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

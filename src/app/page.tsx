@@ -1,7 +1,14 @@
+import Header from "@/components/header/Header";
+import LatestReviews from "@/components/Latest_reviews";
+import LatestUsers from "@/components/Latest_users";
+import HomeCategories from "@/components/BrowseByCategories/HomeCategories";
 export default function Home() {
   return (
-    <div className="home flex text-[5rem]  min-h-[100vh] items-center justify-center ">
-      <h1>Home Page</h1>
+    <div className="home">
+      <Header />
+      <HomeCategories />
+      <LatestReviews />
+      <LatestUsers />
     </div>
   );
 }

@@ -1,0 +1,55 @@
+.latest_reviews {
+  .latest_reviews_header {
+    @apply flex items-center justify-between mt-[3rem] mb-[3rem];
+    .see_more_button {
+      @apply bg-gray-500 px-[1rem] py-[0.5rem] text-white font-bold hover:bg-gray-700;
+    }
+  }
+  .latest_reviews_title {
+    @apply text-[3rem] font-bold;
+  }
+  .reviews {
+    @apply flex flex-col gap-[2rem] mb-[10rem];
+    .review {
+      @apply flex;
+      box-shadow: 0rem 0rem 0.5rem lightgray;
+      .img_container {
+        height: 20rem;
+        width: 20rem;
+        margin-right: 2rem;
+        img {
+          @apply h-[100%] w-[100%];
+          object-position: center;
+        }
+      }
+      .book_info {
+        @apply flex flex-col justify-between py-[.5rem];
+
+        .book_title {
+          @apply text-[3rem] font-bold;
+        }
+        .time,
+        .author,
+        .reviewer,
+        .desc {
+          @apply text-gray-500 font-bold;
+        }
+        .author {
+          @apply text-[1.5rem];
+        }
+        .reviewer {
+          @apply text-[1.2rem];
+        }
+        .rating {
+          @apply text-[1.8rem] text-yellow-300 font-bold;
+        }
+        .desc {
+          padding-bottom: 0.5rem;
+        }
+        .see_more {
+          @apply cursor-pointer text-blue-500 hover:underline;
+        }
+      }
+    }
+  }
+}

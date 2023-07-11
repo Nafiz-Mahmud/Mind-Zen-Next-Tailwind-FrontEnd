@@ -1,0 +1,15 @@
+.header {
+  @apply flex gap-[2rem];
+  .header_title {
+    @apply text-[3.5rem]  font-bold flex items-center justify-center;
+    font-style: italic;
+    flex: 1;
+  }
+  .header_anime {
+    flex: 1;
+    @apply flex items-center justify-center;
+    .header_animation {
+      height: 25rem;
+    }
+  }
+}
