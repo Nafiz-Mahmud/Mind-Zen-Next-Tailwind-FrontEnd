@@ -53,12 +53,16 @@ export default function UserProfile() {
           <h1 className="name">{user.name}</h1>
           <h1 className="email">{user.email}</h1>
           <h1 className="time">Created 3 days ago</h1>
-          <button>Edit</button>
-          <button>Delete</button>
         </div>
       </div>
       <div className="profile_reviews">
-        <h1 className="num_reviews">{user.reviews} Reviews</h1>
+        <div className="num_reviews_edit_delete">
+          <h1>{user.reviews} Reviews</h1>
+          <div className="edit_delete_profile">
+            <button>Edit Profile</button>
+            <button>Delete Profile</button>
+          </div>
+        </div>
         <div className="reviews">
           {reviews?.map((review) => (
             <div className="review" key={review.id}>

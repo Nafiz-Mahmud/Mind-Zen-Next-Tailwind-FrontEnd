@@ -24,8 +24,23 @@
     }
   }
   .profile_reviews {
-    .num_reviews {
-      @apply text-[3rem] font-bold mb-[3rem];
+    .num_reviews_edit_delete {
+      @apply flex items-center justify-between mb-[3rem];
+      h1 {
+        @apply text-[3rem] font-bold;
+      }
+      .edit_delete_profile {
+        @apply flex gap-[3rem];
+        button {
+          @apply px-[1rem] py-[.5rem] rounded-xl font-semibold text-[1.25rem];
+          &:nth-child(1) {
+            @apply bg-green-300 hover:bg-green-400 hover:scale-105 duration-200 hover:shadow-lg;
+          }
+          &:nth-child(2) {
+            @apply bg-red-400 hover:bg-red-500 hover:scale-105 duration-200 hover:shadow-lg;
+          }
+        }
+      }
     }
     .reviews {
       @apply flex flex-col gap-[2rem] mb-[5rem];

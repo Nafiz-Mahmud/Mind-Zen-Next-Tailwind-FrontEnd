@@ -1,3 +1,44 @@
 .log_in {
-  background-color: coral;
+  box-shadow: 0.2rem 0.2rem 0.5rem lightgray;
+  padding: 1rem 0rem;
+  margin: 4em 0rem 1rem 0rem;
+  .login_container {
+    @apply flex flex-col;
+    .login_title {
+      @apply text-[3rem] font-bold text-center;
+      text-shadow: 0.2rem 0.2rem 0.05rem lightgray;
+    }
+
+    form {
+      @apply flex flex-col items-center gap-[2rem] my-[3rem];
+      input {
+        padding: 0.5rem 0rem;
+        width: 50%;
+        border-bottom: 0.15rem solid gray;
+        outline: none;
+        font-weight: bold;
+        background-color: transparent;
+        letter-spacing: 0.1rem;
+        font-size: 1.3rem;
+        &:focus {
+          border-bottom: 0.15rem solid skyblue;
+        }
+      }
+      .show_hide_password {
+        @apply bg-gray-300 px-[1rem] py-[.5rem] hover:bg-gray-400 rounded font-semibold;
+      }
+      .login_submit_button {
+        @apply bg-green-300 px-[1rem] py-[.5rem] rounded font-bold hover:bg-green-400 hover:scale-105 duration-200 shadow-xl;
+      }
+    }
+    .login_error {
+      @apply text-red-500 font-bold bg-red-200 px-[1.5rem] py-[.5rem] border-[.15rem] border-red-400;
+    }
+    p {
+      @apply font-semibold text-center pb-[1rem];
+      span {
+        @apply underline text-blue-500 cursor-pointer;
+      }
+    }
+  }
 }
