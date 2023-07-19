@@ -1,3 +1,4 @@
+"use client";
 import "../../../styles/user_profile.scss";
 import Image from "next/image";
 import ben from "../../../../public/benn.jpg";
@@ -5,6 +6,8 @@ import Link from "next/link";
 import first_img from "../../../../public/the_book_of_art.jpg";
 import second_img from "../../../../public/crack_the_code.jpeg";
 import third_img from "../../../../public/lunar_storm.jpeg";
+import DeleteUser from "@/components/deleteUser/DeleteUser";
+import { useState } from "react";
 
 export default function UserProfile() {
   const user = {
@@ -43,6 +46,7 @@ export default function UserProfile() {
       desc: "A quick brown fox jumps over the lazy dog. lorem ipsum a quick brown fox jumps over the lazy dog. lorem ipsum a quick brown fox jumps over the lazy dog.",
     },
   ];
+  const [isDeleteUser, setIsDeleteUser] = useState(false);
   return (
     <div className="user_profile">
       <div className="profile_header">
@@ -60,7 +64,9 @@ export default function UserProfile() {
           <h1>{user.reviews} Reviews</h1>
           <div className="edit_delete_profile">
             <button>Edit Profile</button>
-            <button>Delete Profile</button>
+            <button onClick={() => setIsDeleteUser((c) => !c)}>
+              Delete Profile
+            </button>
           </div>
         </div>
         <div className="reviews">
@@ -89,6 +95,7 @@ export default function UserProfile() {
           ))}
         </div>
       </div>
+      {isDeleteUser && <DeleteUser setIsDeleteUser={setIsDeleteUser} />}
     </div>
   );
 }

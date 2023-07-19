@@ -1,0 +1,22 @@
+.delete_user {
+  @apply bg-[rgba(211,211,211,0.5)] fixed min-h-[100vh] min-w-[100vw] top-0 left-0 flex items-center justify-center;
+  backdrop-filter: blur(0.05rem);
+  .delete_user_container {
+    @apply bg-white px-[8rem] py-[4rem] rounded-lg;
+    box-shadow: 0.2rem 0.2rem 0.5rem lightgray;
+    .delete_user_title {
+      @apply text-[2rem] font-bold mb-[3rem];
+    }
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .cancel_delete {
+        @apply bg-red-400 px-[1rem] py-[.5rem] font-semibold rounded;
+      }
+      .sure_delete {
+        @apply bg-green-400 px-[1rem] py-[.5rem] font-semibold rounded;
+      }
+    }
+  }
+}
