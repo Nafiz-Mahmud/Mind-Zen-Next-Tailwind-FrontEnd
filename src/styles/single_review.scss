@@ -33,9 +33,21 @@
       }
     }
   }
-  p {
-    @apply text-gray-600 text-[2rem] font-bold mb-[3rem];
-    letter-spacing: 0.05rem;
-    word-spacing: 0.15rem;
+  .review_edit_delete_buttons {
+    @apply flex gap-[4rem]  justify-end;
+    button {
+      &:nth-child(1) {
+        @apply bg-green-300 hover:bg-green-500;
+      }
+      &:nth-child(2) {
+        @apply bg-red-400 hover:bg-red-500;
+      }
+      @apply px-[2rem] py-[1rem] rounded font-semibold text-[1.5rem] hover:scale-105 duration-200;
+    }
+    p {
+      @apply text-gray-600 text-[2rem] font-bold mb-[3rem];
+      letter-spacing: 0.05rem;
+      word-spacing: 0.15rem;
+    }
   }
 }

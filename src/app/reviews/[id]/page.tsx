@@ -52,7 +52,13 @@ export default function SingleReview({ params }: SingleReviewProps) {
       </div>
       <br />
       <br />
+      <div className="review_edit_delete_buttons">
+        <button className="edit_review">Edit</button>
+        <button className="delete_review">Delete</button>
+      </div>
 
+      <br />
+      <br />
       <hr />
       <br />
       <br />

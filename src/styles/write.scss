@@ -5,8 +5,29 @@
   form {
     display: flex;
     flex-direction: column;
-
     gap: 3rem;
+    .input_img_container {
+      height: 30rem;
+      width: 20rem;
+      object-fit: cover;
+      object-position: center;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .custom-file-input {
+      padding: 1rem;
+      background-color: #007bff;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      width: fit-content;
+    }
+
     input {
       padding: 1rem 0rem;
       font-weight: bold;
@@ -14,9 +35,12 @@
       border-bottom: 0.1rem solid lightgray;
       outline: none;
       &:nth-child(1) {
-        font-size: 3rem;
+        display: none;
       }
       &:nth-child(2) {
+        font-size: 4rem;
+      }
+      &:nth-child(3) {
         font-size: 2rem;
       }
     }
