@@ -1,13 +1,13 @@
 "use client";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import "../../styles/log_in.scss";
 import Link from "next/link";
 export default function SignUp() {
   const [isShowPass, setIsShowPass] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
-  async function handleSubmit(e) {
+  const [error, setError] = useState<null | String>(null);
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     console.log({ email, password });
     password.length < 6
@@ -23,7 +23,9 @@ export default function SignUp() {
             type="email"
             name="email"
             placeholder="Email..."
-            onInput={(e) => setEmail(e.target.value)}
+            onInput={(e: ChangeEvent<HTMLInputElement>) =>
+              setEmail(e.target.value)
+            }
           />
           <input
             type={isShowPass ? "text" : "password"}

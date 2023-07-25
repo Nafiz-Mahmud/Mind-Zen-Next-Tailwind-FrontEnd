@@ -7,7 +7,7 @@ export default function Write() {
   const [rating, setRating] = useState("");
   const [desc, setDesc] = useState("");
   const [error, SetError] = useState("");
-  function handleSubmit(e) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
   }
   return (
@@ -32,8 +32,8 @@ export default function Write() {
         <textarea
           name="desc"
           id="desc"
-          cols="60"
-          rows="15"
+          cols={60}
+          rows={15}
           placeholder="Write your review..."
           onChange={(e) => setDesc(e.target.value)}
         ></textarea>
