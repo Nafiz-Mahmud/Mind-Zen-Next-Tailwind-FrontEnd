@@ -27,7 +27,9 @@
       border-radius: 0.5rem;
       width: fit-content;
     }
-
+    .title {
+      font-size: 2.5rem;
+    }
     input {
       padding: 1rem 0rem;
       font-weight: bold;
@@ -36,12 +38,6 @@
       outline: none;
       &:nth-child(1) {
         display: none;
-      }
-      &:nth-child(2) {
-        font-size: 4rem;
-      }
-      &:nth-child(3) {
-        font-size: 2rem;
       }
     }
     #desc {

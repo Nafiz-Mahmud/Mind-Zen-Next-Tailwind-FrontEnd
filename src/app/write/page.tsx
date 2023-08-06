@@ -6,7 +6,7 @@ export default function Write() {
   const [bookImg, setBookImg] = useState("");
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
-  const [rating, setRating] = useState("");
+  const [rating, setRating] = useState<any>("");
   const [desc, setDesc] = useState("");
   const [error, SetError] = useState("");
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -39,6 +39,7 @@ export default function Write() {
 
         <input
           type="text"
+          className="title"
           placeholder="Title"
           onChange={(e) => setTitle(e.target.value)}
         />
@@ -50,8 +51,11 @@ export default function Write() {
         <input
           type="number"
           placeholder="Rating ( Must be <= 5.00 )"
-          onChange={(e) => setRating(e.target.value)}
+          onChange={(e) => {
+            setRating(e.target.value);
+          }}
         />
+        <h1>{rating}</h1>
         <textarea
           name="desc"
           id="desc"
